@@ -1,0 +1,19 @@
+<type:__>: <subject>
+- content
+
+# issue track number (#number)
+# --- COMMIT END ---
+# <type> list
+#   feature  : New feature
+#   fix      : Fix bug
+#   refactor : Refactor code
+#   style    : Change style of code(white space, semicolon etc)
+#   test     : Add/Change/Delete test case
+#   docs     : Add/Change/Delete document
+#   build    : Change in build script
+#   ci       : Change in ci script
+#   chore    : etc
+# ------------------
+#   Do not use period at the end of subject
+#   Use the body explain "what" and "why" vs "how"
+# ------------------
