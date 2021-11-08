@@ -12,7 +12,7 @@ function App() {
     };
 
     fetch(
-      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=AIzaSyClLfVPEfqdpMRJ55ggbEuUXp6tMToLMsw',
+      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=',
       requestOptions
     )
       .then((response) => response.json())
