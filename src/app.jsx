@@ -1,6 +1,7 @@
 /** @format */
 import React, { useEffect, useState } from 'react';
 import './app.css';
+import VideoList from './components/video_list/video_list';
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -12,7 +13,7 @@ function App() {
     };
 
     fetch(
-      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=',
+      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=KR&key=',
       requestOptions
     )
       .then((response) => response.json())
@@ -20,7 +21,7 @@ function App() {
       .catch((error) => console.log('error', error));
   }, []);
 
-  return <h1>Ready?</h1>;
+  return <VideoList videos={videos} />;
 }
 
 export default App;
