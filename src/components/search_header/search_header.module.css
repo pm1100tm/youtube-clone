@@ -1,0 +1,44 @@
+/** @format */
+
+.searchHeader {
+  display: flex;
+  height: 2.6rem;
+  padding: 0.5em 1em;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.logoImage {
+  width: 36px;
+  margin-right: 0.2em;
+}
+
+.title {
+  margin: 0px;
+  font-size: 1.6rem;
+}
+
+.input {
+  flex-basis: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: 0;
+}
+
+.button {
+  background-color: white;
+  margin-right: 30rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.buttonImage {
+  height: 100%;
+}
