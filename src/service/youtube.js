@@ -11,7 +11,7 @@ class YoutubeNetwork {
 
   mostPopular() {
     return fetch(
-      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=KR&maxResults=25&key=AIzaSyDi50DRnmdHRQU_vfaocaFxkJgMk8J_Avs`,
+      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=KR&maxResults=25&key=${this.key}`,
       this.getRequestOptions
     )
       .then((response) => response.json())
@@ -20,7 +20,7 @@ class YoutubeNetwork {
 
   searchByInputValue(inputSearchValue) {
     return fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&type=video&q=${inputSearchValue}&key=AIzaSyDi50DRnmdHRQU_vfaocaFxkJgMk8J_Avs`,
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&type=video&q=${inputSearchValue}&key=${this.key}`,
       this.requestOptions
     )
       .then((response) => response.json())
