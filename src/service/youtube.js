@@ -3,7 +3,7 @@
 class YoutubeNetwork {
   constructor(key) {
     this.key = key;
-    this.requestOptions = {
+    this.getRequestOptions = {
       method: 'GET',
       redirect: 'follow'
     };
