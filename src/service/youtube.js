@@ -19,7 +19,7 @@ class YoutubeNetwork {
   }
 
   async searchByInputValue(inputSearchValue) {
-    const response = await fetch(
+    const response = fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&type=video&q=${inputSearchValue}&key=${this.key}`,
       this.requestOptions
     );
