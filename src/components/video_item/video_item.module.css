@@ -1,8 +1,15 @@
 /** @format */
 
 .container {
-  width: 50%;
   padding: 0.2em;
+}
+
+.container.list {
+  width: 100%;
+}
+
+.container.grid {
+  width: 50%;
 }
 
 .video {

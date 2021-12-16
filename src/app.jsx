@@ -27,10 +27,16 @@ function App({youtubeNetwork}) {
     <>
       <div className={styles.app}>
         <SearchHeader onSearch={search} />
-        <VideoList videos={videos} onVideoClick={selectVideo} />
-        {
-          selectedVideo && <VideoDetail video={selectedVideo} />
-        }
+        <section className={styles.content}>
+          { selectedVideo &&
+            <div className={styles.detail}>
+              <VideoDetail video={selectedVideo} />
+            </div>
+          }
+          <div className={styles.list}>
+            <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list' : 'grid'} />
+          </div>
+        </section>
       </div>
     </>
   );
