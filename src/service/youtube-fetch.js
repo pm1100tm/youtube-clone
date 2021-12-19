@@ -1,6 +1,6 @@
 /** @format */
 
-class YoutubeNetwork {
+class YoutubeFetch {
   constructor(key) {
     this.key = key;
     this.getRequestOptions = {
@@ -28,4 +28,4 @@ class YoutubeNetwork {
   }
 }
 
-export default YoutubeNetwork;
+export default YoutubeFetch;
