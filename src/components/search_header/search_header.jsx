@@ -1,9 +1,9 @@
 /** @format */
 
 import styles from './search_header.module.css';
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 
-const SearchHeader = ({ onSearch }) => {
+const SearchHeader = memo(({ onSearch }) => {
   const inputRef = useRef();
 
   const handleSearch = () => {
@@ -22,7 +22,11 @@ const SearchHeader = ({ onSearch }) => {
   return (
     <header className={styles.searchHeader}>
       <div className={styles.logo}>
-        <img className={styles.logoImage} src="/images/youtube-logo.png"></img>
+        <img
+          className={styles.logoImage}
+          alt="youtube-logo empty"
+          src="/images/youtube-logo.png"
+        ></img>
         <h1 className={styles.title}>YOUTUBE</h1>
       </div>
       <input
@@ -43,6 +47,6 @@ const SearchHeader = ({ onSearch }) => {
       </button>
     </header>
   );
-};
+});
 
 export default SearchHeader;

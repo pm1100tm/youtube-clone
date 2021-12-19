@@ -1,5 +1,5 @@
 /** @format */
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styles from './app.module.css';
 import SearchHeader from './components/search_header/search_header';
 import VideoList from './components/video_list/video_list';
@@ -11,14 +11,17 @@ function App({ youtubeNetwork }) {
 
   useEffect(() => {
     youtubeNetwork.mostPopular().then((videos) => setVideos(videos));
-  }, []);
+  }, [youtubeNetwork]);
 
-  const search = (inputSearchValue) => {
-    setSelectedVideo(null);
-    youtubeNetwork.searchByInputValue(inputSearchValue).then((videos) => {
-      setVideos(videos);
-    });
-  };
+  const search = useCallback(
+    (inputSearchValue) => {
+      setSelectedVideo(null);
+      youtubeNetwork.searchByInputValue(inputSearchValue).then((videos) => {
+        setVideos(videos);
+      });
+    },
+    [youtubeNetwork]
+  );
 
   const selectVideo = (video) => {
     setSelectedVideo(video);
